@@ -10,7 +10,7 @@ export MESOS_work_dir=/home/apps/mesos
 export MESOS_ip=`bash /home/vagrant/labs/mesos/hostname_ip_get.sh`
 export MESOS_hostname_lookup=false
 export MESOS_log_dir=/var/log/mesos
-export MESOS_cluster=TEST
+
 EOF
 
 cat > /etc/mesos/mesos-master-env.sh<<EOF
@@ -19,7 +19,8 @@ export MESOS_work_dir=/home/apps/mesos
 export MESOS_ip=`bash /home/vagrant/labs/mesos/hostname_ip_get.sh`
 export MESOS_hostname_lookup=false
 export MESOS_log_dir=/var/log/mesos
-export MESOS_quorum=2
+export MESOS_quorum=1
+export MESOS_cluster=TEST
 EOF
 
 # start master
